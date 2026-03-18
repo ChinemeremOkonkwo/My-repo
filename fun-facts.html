@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .fact {
+            margin: 15px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            line-height: 1.6;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            font-size: 1em;
+            background-color: #fff;
+            color: #667eea;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Fun Facts 🎉</h1>
+        <div class="fact" id="fact">Click the button to see a fun fact!</div>
+        <button onclick="showFact()">Show Fun Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            '🍯 Honey never spoils. Archaeologists have found 3,000-year-old honey in Egyptian tombs that was still edible!',
+            '🥑 Avocados are fruits, not vegetables.',
+            '🍓 Bananas are berries, but strawberries are not.',
+            '🐙 Octopuses have three hearts and blue blood!',
+            '🦩 A group of flamingos is called a "flamboyance.",
+            '🦁 A lion's roar can be heard from 5 miles away.',
+            '🧠 Your brain uses 20% of your body's energy, despite being only 2% of your body weight.',
+            '⚡ A lightning bolt is 5 times hotter than the surface of the sun.',
+            '🦆 Ducks have waterproof feathers and can sleep with one eye open!',
+            '🌙 The Moon is slowly moving away from Earth at about 1.5 inches per year.'
+        ];
+
+        function showFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
